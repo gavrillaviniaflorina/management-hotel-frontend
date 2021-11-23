@@ -1,0 +1,86 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Shippori Antique B1', sans-serif;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 200px 4px 300px minmax(400, 1fr) 100px;
+    grid-template-areas: "header header" "aside aside" "main main" "footer flooter";
+    grid-gap: 100px;
+}
+
+header {
+    grid-area: header;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "title title" "ul ul";
+    align-items: center;
+    text-align: center;
+}
+
+header h3 {
+    grid-area: title;
+    align-self: center;
+}
+
+header ul {
+    grid-area: ul;
+}
+
+aside {
+    grid-area: aside;
+    display: grid;
+    grid-template-rows: 20px 1fr;
+    grid-template-areas: "search search" "offer offer";
+    text-align: center;
+}
+
+.search {
+    grid-area: search;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+}
+
+.search p {
+    margin-right: 3px;
+    width: 70%;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.offerts {
+    grid-area: offer;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "ch ch" "summer summer" "new new" "easter easter";
+    text-align: center;
+}
+
+.chrismas {
+    grid-area: ch;
+}
+
+.summer {
+    grid-area: summer;
+}
+
+.newYar {
+    grid-area: new;
+}
+
+.easter {
+    grid-area: easter;
+}
+
+main {
+    grid-area: main;
+}
+
+footer {
+    grid-area: footer;
+}
